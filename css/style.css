@@ -235,7 +235,7 @@ h2 {
   grid-row: 1/4;
 
   display: grid;
-  grid-template-rows: 38px 52% 38%;
+  grid-template-rows: 38px 1fr 1fr;
   grid-template-columns: 1fr;
 }
 /**************************/
@@ -247,9 +247,10 @@ h2 {
   border-radius: 5px;
   padding: 30px 20px 20px 20px;
 
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
 }
 
 .announcement {
@@ -278,10 +279,11 @@ h2 {
   border-radius: 5px;
   padding: 20px;
   row-gap: 20px;
+  align-items: center;
+  height: 80%;
 }
 .trend {
   display: flex;
-  align-items: center;
   gap: 10px;
 }
 .trend .profile-picture img {
